@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="styles.css">
 <head>
     <title>Great Cliff</title>
     <meta charset="utf-8">
 </head>
+<body id="contact">
 <body>
     <div class="container">
 <header>
-    <img src="images/cliff_ocean.jpg" alt="Ocean View Cliff" width="1280" height="564">
+    
     <div class="main-header">
 <div class="logo">
     <img src="images/logo.png" alt="Great Cliffs Logo" width="125" height="125">
@@ -24,55 +26,84 @@
         </header>
 <main>
     <h1>Contacting Us</h1>
-    <p>
-        If you need more information about the Cliffs, Hours of Operations, Facilities or questions about this site, please contact us using one of the following:
-    </p>
-    <h2>Phone:</h2>
-    <p>(800)GCLIFFS</p>
-    <h2>Email:</h2>
-    <p>info@greatcliffs.com</p>
-    <h2>Fill Out This Form:</h2>
-    <form action="/contact" method="post">
-        <fieldset>
-            <legend>Contact Form</legend>
-            <input type="text" name="fullname" placeholder="Enter your full name" required><br><br>
-            <input type="email" name="email" placeholder="Enter your email" required><br><br>
-            <input type="tel" name="phone" placeholder="Enter your phone"><br><br>
+<p>
+You can drop by the visitors information center at the cliff site that you plan on visiting. They are open
+7 days a week from 8.00AM to 5.00PM. You can also contact us directly if you need additional information about 
+the Cliffs, Hours of Operations, Facilities or questions about this site using one of the following:
+</p>
+    
+<div class="contactinfo">
+    <div class="phone">
+        <span>Phone:</span>
+        <span>(800)GCLIFFS</span>
+    </div>
+    <div class="email">
+        <span>Email:</span>
+        <span>info@greatcliffs.com</span>
+    </div>
+</div>
 
-            <label>How should we contact you?</label><br>
-            <input type="radio" id="contact_email" name="contact_method" value="Email" checked>
-            <label for="contact_email">Email</label>
-            <input type="radio" id="contact_phone" name="contact_method" value="Phone">
-            <label for="contact_phone">Phone</label>
-            <br><br>
+<form action="/contact" method="post">  
+<fieldset>  
+    <legend>Contact Form</legend>
+    <div class="textbox">
+        <label>Name:</label> 
+        <input type="text" name="name" placeholder="John Doe">  
+        <label>Email:</label>  
+        <input type="email" name="email" placeholder="johndoe@gmail.com"> 
+        <label>Phone:</label>
+        <input type="text" name="phone" placeholder="xxx-xxx-xxxx"> 
+    </div>
+    
+    <div class="radios">
+        <label>How should we contact you?</label>  
+        <input type="radio" name="contact" value="email" checked>Email 
+        <input type="radio" name="contact" value="phone">Phone
+    </div>
 
-            <label for="cliff">Which Cliff are you inquiring?</label><br>
-            <select id="cliff" name="cliff">
-                <option>West Cliff</option>
-                <option>North Cliff</option>
-                <option>East Cliff</option>
-                <option>South Cliff</option>
-            </select>
-            <br><br>
+    <div class="selectmenu">
+        <label>Which Cliff are you inquiring?</label>  
+        <select>
+            <option>West Cliff</option>
+            <option>North Cliff</option>
+            <option>East Cliff</option>
+            <option>South Cliff</option>
+        </select>
+    </div>
+    
+    <div class="commentbox">
+        <label>How did you hear about us:</label>  
+        <textarea></textarea>
+    </div>
 
-            <label for="hear">How did you hear about us:</label><br>
-            <textarea id="hear" name="hear" rows="2"></textarea>
-            <br><br>
-
-            <button type="submit">Inquire</button>
-        </fieldset>
-    </form>
+    <div class="button">
+        <input type="submit" value="Inquire">
+    </div> 
+</fieldset>  
+</form>
 </main>
-        <section>
-            <ul id="partners">
-                <li class="partner"><h3>Partner 1 Image</h3></li>
-                <li class="partner"><h3>Partner 2 Image</h3></li>
-                <li class="partner"><h3>Partner 3 Image</h3></li>
-                <li class="partner"><h3>Partner 4 Image</h3></li>
-                <li class="partner"><h3>Partner 5 Image</h3></li>
-                <li class="partner"><h3>Partner 6 Image</h3></li>
-            </ul>
-        </section>
+<section>
+    <ul id="partners">
+        <li class="partner">
+            <img src="images/partners/partner-bustour.png" alt="Partner Bus Tours">
+        </li>
+        <li class="partner">
+            <img src="images/partners/partner-cabinrental.png" alt="Partner Cabin Rental">
+        </li>
+        <li class="partner">
+            <img src="images/partners/partner-campingadv.png" alt="Partner Camping Adventure">
+        </li>
+        <li class="partner">
+            <img src="images/partners/partner-collegetours.png" alt="Partner College Tours">
+        </li>
+        <li class="partner">
+            <img src="images/partners/partner-rentalbike.png" alt="Partner Bike Rentals">
+        </li>
+        <li class="partner">
+            <img src="images/partners/partner-tourgroup.png" alt="Partner Tour Group">
+        </li>
+    </ul>
+</section>
         <footer>
             <div id="nondisclaimer">
                 <div class="copy">
