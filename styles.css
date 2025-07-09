@@ -7,6 +7,10 @@
         background: no-repeat lightgrey url(images/cliff_ocean.jpg);
         background-size: 1500px;
     }
+    #cliffs header {
+    background: no-repeat lightgrey url(images/forest_cliff.jpg);
+    background-size: 1500px;
+}
     #activities header {
     background: no-repeat lightgrey url(images/runfly.jpg);
     background-size: 1500px;
@@ -16,6 +20,7 @@
     background: no-repeat lightgrey url(images/cliff_rock.jpg);
     background-size: 1500px;
 }
+
     .main-header {
         background-color: rgba(255, 255, 255, 0.8);
         width: 700px;
@@ -278,7 +283,7 @@ td:first-child {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 2em 4em;
+    gap: 1em 2em;
     justify-content: center;
     align-items: start;
     width: 900px;
@@ -287,7 +292,7 @@ td:first-child {
 }
 
 .cliff-card {
-    width: 350px;
+    width: 450px;
     margin-bottom: 2em;
 }
 
