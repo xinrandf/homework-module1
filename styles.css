@@ -243,10 +243,19 @@ td:first-child {
 }
 /*Contact */
 #contact main {
-    background: #fff;
-    border: 1px solid #d6e07a;
-    padding: 2em 3em 2em 3em;
+    background: none;
+    border: none;
+    padding: 0;
     margin: 2em auto 2em auto;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+#contact main form {
+    background: #fff;
+    border: 1.5px solid #d6e07a;
+    padding: 2em 3em 2em 3em;
+    margin: 0 auto;
     width: 95%;
     box-sizing: border-box;
 }
