@@ -78,15 +78,19 @@ the Cliffs, Hours of Operations, Facilities or questions about this site using o
     </div>
 
     <!--Random Codes-->
+
     <div class="randomcode">
-        <input type="text" name="randomcode" placeholder="Enter characters">
-        <p id="codes"></p>
+        <input type="text" id="randomcode-input" name="randomcode" maxlength="8" placeholder="Enter characters">
+        <span id="randomcode-display" style="display:inline-block;min-width:120px;background:#bbb;color:#111;font-size:1.5em;padding:6px 18px;margin-left:16px;text-align:center;font-family:monospace;font-weight:bold;"></span>
     </div>
 
     <div class="button">
         <input type="submit" value="Inquire">
     </div> 
 </fieldset>  
+
+<!-- Random code logic -->
+<script src="js/randomcodes.js"></script>
 </form>
 </main>
 <section>
