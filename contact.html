@@ -114,14 +114,15 @@ function disableButton(btnvalue) {
     var submitBtn = document.querySelector('input[type="submit"]');
     submitBtn.disabled = !btnvalue;
     if (btnvalue == false) { // button is disabled
-        submitBtn.style.backgroundColor = "rgba(73, 119, 209, 0.3)";
-        submitBtn.style.color = "rgba(255, 255, 255, 0.5)";
+        submitBtn.style.backgroundColor = "rgba(73, 119, 209, 1)";
+        submitBtn.style.color = "rgba(255, 255, 255, 0.95)";
     } else { // button is enabled
         submitBtn.style.backgroundColor = "rgba(73, 119, 209, 1)";
         submitBtn.style.color = "rgba(255, 255, 255, 1)";
     }
 }
 </script>
+<script>
 // Listen to user input code
 var codebox = document.getElementById("randomcode-input"); // get textbox
 codebox.addEventListener("input", evaluateCode); // listen to code entered in textbox
@@ -136,6 +137,7 @@ function evaluateCode() {
         disableButton(false); // if match, run the function to enable button
     }
 }
+</script>
 
 <script src="js/randomcodes.js"></script>
 </form>
