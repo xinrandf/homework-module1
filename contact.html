@@ -6,7 +6,7 @@
     <title>Great Cliff</title>
     <meta charset="utf-8">
 </head>
-<body id="contact">
+<body id="contact" onload="disableButton(true)">
 <body>
     <div class="container">
 <header>
@@ -90,6 +90,53 @@ the Cliffs, Hours of Operations, Facilities or questions about this site using o
 </fieldset>  
 
 <!-- Random code logic -->
+<script>
+// Grouped variables for random code logic
+var code = '';
+var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@$#';
+var getCode = '';
+var btnvalue;
+// ...existing code from randomcodes.js will follow...
+
+// Dynamically enable/disable the submit button using btnvalue
+window.onload = function() {
+    var submitBtn = document.querySelector('input[type="submit"]');
+    // Set initial value (false disables, true enables)
+    btnvalue = false;
+    submitBtn.disabled = !btnvalue;
+    // Example: to enable later, set btnvalue = true and update button
+    // btnvalue = true;
+    // submitBtn.disabled = !btnvalue;
+}
+ 
+// Determine when to enable or disable button
+function disableButton(btnvalue) {
+    var submitBtn = document.querySelector('input[type="submit"]');
+    submitBtn.disabled = !btnvalue;
+    if (btnvalue == false) { // button is disabled
+        submitBtn.style.backgroundColor = "rgba(73, 119, 209, 0.3)";
+        submitBtn.style.color = "rgba(255, 255, 255, 0.5)";
+    } else { // button is enabled
+        submitBtn.style.backgroundColor = "rgba(73, 119, 209, 1)";
+        submitBtn.style.color = "rgba(255, 255, 255, 1)";
+    }
+}
+</script>
+// Listen to user input code
+var codebox = document.getElementById("randomcode-input"); // get textbox
+codebox.addEventListener("input", evaluateCode); // listen to code entered in textbox
+
+// Run function if detected user had entered a character in textbox
+function evaluateCode() {
+    getCode = document.getElementById("randomcode-input").value; // get character entered
+    var charset1 = getCode.trim(); // remove any hidden characters entered
+    var charset2 = code.trim(); // remove any hidden characters generated
+    // Test if code entered matches the number of generated characters and the code itself
+    if (charset1.length == charset2.length && charset1 == charset2) {
+        disableButton(false); // if match, run the function to enable button
+    }
+}
+
 <script src="js/randomcodes.js"></script>
 </form>
 </main>
