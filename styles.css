@@ -1,3 +1,14 @@
+/* Activity Table Interactivity Styles */
+table td.selectable {
+    cursor: pointer;
+}
+table td.selected {
+    background-color: #b6e7a0 !important;
+    color: #2d4c1e;
+}
+table td {
+    transition: background 0.2s, color 0.2s;
+}
 /* Random code input and display styling for contact form */
 #contact main .randomcode {
     display: flex;
