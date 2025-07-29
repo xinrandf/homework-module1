@@ -24,16 +24,22 @@ $(document).ready(function() {
             // Add or remove class when cell is selected
             $(this).toggleClass("tdhighlight");
 
+            // Get column index of clicked cell
+            var colIndex = $(this).index();
+
+            // Get cliff site name from the header row
+            var cliffSite = $("table thead th").eq(colIndex).text().trim();
+
             if ($(this).hasClass("tdhighlight")) {
                 // Make display box visible
                 $("#displaySelected").css("visibility", "visible");
                 $("#displaySelected").css("margin-top", "2em");
 
-                // Add child element with contents of cell
-                $("#result").append("<p>" + content + "</p>");
+                // Add child element with contents of cell and cliff site name
+                $("#result").append("<p>" + content + " at " + cliffSite + "</p>");
             } else {
                 // Remove child element
-                $("#result p:contains('" + content + "')").remove();
+                $("#result p:contains('" + content + " at " + cliffSite + "')").remove();
 
                 // Check if there are any child elements within parent
                 if ($("#result").has("p").length === 0) {
