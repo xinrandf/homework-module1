@@ -384,3 +384,32 @@ td:first-child {
     object-fit: cover;
     display: block;
 }
+
+/* Display Box Styles */
+#displaySelected {
+    visibility: hidden;
+    margin: 0 auto;
+    width: 600px;
+    border: 2px solid #9ed034;
+    padding: 0.75em;
+}
+
+#displaySelected #result, #displaySelected #sendinfo {
+    display: inline-block;
+    margin: 0;
+}
+
+#displaySelected #result {
+    min-height: 50px;
+    width: 300px;
+    padding: 0;
+}
+
+#displaySelected #result h4 {
+    margin-bottom: 1em;
+    font-size: 1.15em;
+}
+
+#displaySelected #sendinfo input[type="email"] {
+    width: 200px;
+}
